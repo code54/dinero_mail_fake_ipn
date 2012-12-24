@@ -42,4 +42,10 @@ class IntegrationRequestTest < ActiveSupport::TestCase
     assert_equal integration_request.raw['item_quantity_1'].to_i, item.quantity
     assert_equal integration_request.raw['item_ammount_1'].to_i / 100.0, item.amount
   end
+
+  test "knows the ok url callback" do
+    ok_url = 'http://seinfeldshop.dev/dinero_mail/ok?token=1234'
+    integration_request = IntegrationRequest.new(raw: { 'ok_url' => ok_url })
+    assert_equal ok_url, integration_request.ok_url
+  end
 end

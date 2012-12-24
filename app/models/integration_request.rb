@@ -11,6 +11,10 @@ class IntegrationRequest < ActiveRecord::Base
     build_operation(prefilled_operation_attributes)
   end
 
+  def ok_url
+    raw['ok_url']
+  end
+
 private
 
   def unchangeable_operation_attributes
