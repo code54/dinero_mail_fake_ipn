@@ -1,0 +1,2 @@
+class IntegrationRequestsController < ApplicationController
+end
