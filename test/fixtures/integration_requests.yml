@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  raw: MyText
-
-two:
-  raw: MyText
+jacket:
+  raw:
+    transaction_id: '1'
+    item_name_1: 'Jacket'
+    item_quantity_1: '1'
+    item_ammount_1: '100000'
+    buyer_phone: '0303456'
+    buyer_email: 'jerry@seinfeld.com'
