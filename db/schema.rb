@@ -11,13 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20121224012053) do
+ActiveRecord::Schema.define(version: 20121224021920) do
 
   create_table "integration_requests", force: true do |t|
     t.text     "raw"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "items", force: true do |t|
+    t.integer  "operation_id"
+    t.string   "code"
+    t.string   "name"
+    t.integer  "quantity"
+    t.decimal  "amount",       precision: 10, scale: 2
+    t.integer  "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "items", ["operation_id"], name: "index_items_on_operation_id"
 
   create_table "operations", force: true do |t|
     t.integer  "integration_request_id"
