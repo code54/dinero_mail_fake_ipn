@@ -97,6 +97,8 @@ GEM
     rack (1.4.1)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails-i18n (0.7.1)
+      i18n (~> 0.5)
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
@@ -134,6 +136,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails!
+  rails-i18n (~> 0.7.1)
   sass-rails!
   sprockets-rails (~> 2.0.0.rc1)
   turbolinks
