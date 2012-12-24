@@ -1,0 +1,16 @@
+es:
+  activerecord:
+    models:
+      operation: 'Operación'
+    attributes:
+      operation:
+        buyer_address: 'Dirección'
+        buyer_comment: 'Comentarios'
+        buyer_document_number: 'Número de Documento'
+        buyer_document_type: 'Tipo de Documento'
+        buyer_email: 'Email'
+        buyer_full_name: 'Nombre Completo'
+        buyer_phone: 'Teléfono'
+        number_of_payments: 'Cuotas'
+        payment_method: 'Medio de Pago'
+        payment_method_type: 'Método de Pago'
