@@ -11,12 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20121224002443) do
+ActiveRecord::Schema.define(version: 20121224012053) do
 
   create_table "integration_requests", force: true do |t|
     t.text     "raw"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "operations", force: true do |t|
+    t.integer  "integration_request_id"
+    t.string   "client_id",              limit: 20
+    t.integer  "status"
+    t.string   "buyer_full_name"
+    t.string   "buyer_document_type"
+    t.string   "buyer_document_number"
+    t.string   "buyer_email"
+    t.string   "buyer_address"
+    t.text     "buyer_comment"
+    t.string   "buyer_phone"
+    t.integer  "payment_method_type"
+    t.string   "payment_method"
+    t.integer  "number_of_payments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "operations", ["client_id"], name: "index_operations_on_client_id", unique: true
+  add_index "operations", ["integration_request_id"], name: "index_operations_on_integration_request_id"
 
 end
