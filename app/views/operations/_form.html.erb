@@ -76,6 +76,34 @@
   </fieldset>
 
   <fieldset>
+    <legend>Transiciones</legend>
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Estado</th>
+          <th>Demorar</th>
+          <th>Notificar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= f.fields_for :transitions do |transition_fields| %>
+          <tr>
+            <td><span class="badge"><%= transition_fields.index + 1 %></span></td>
+            <td><%= transition_fields.select :status, statuses_collection %></td>
+            <td><%= transition_fields.select :schedule_delay, schedule_delays_collection %></td>
+            <td><%= transition_fields.select :notification_delay, notification_delays_collection %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="transition_actions">
+      <a class="btn btn-mini btn-success add_transition" href="#"><i class="icon-plus icon-white"></i></a>
+      <a class="btn btn-mini btn-danger remove_transition" href="#"><i class="icon-minus icon-white"></i></a>
+    </div>
+  </fieldset>
+
+  <fieldset>
     <div class="form-actions">
       <%= f.submit class: 'btn btn-primary' %>
     </div>

@@ -14,4 +14,16 @@ module OperationsHelper
   def number_of_payments_collection
     [0]
   end
+
+  def statuses_collection
+    [['Pendiente De Pago', 1], ['Acreditado', 2], ['Cancelado', 3]]
+  end
+
+  def schedule_delays_collection
+    [['No Esperar', 0], ['1 Minuto', 1], ['5 Minutos', 5], ['15 Minutos', 15]]
+  end
+
+  def notification_delays_collection
+    [['No Notificar', -1], ['No Esperar', 0], ['1 Minuto', 1], ['5 Minutos', 5], ['15 Minutos', 15]]
+  end
 end

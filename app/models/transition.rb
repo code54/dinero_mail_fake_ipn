@@ -16,11 +16,11 @@ private
   end
 
   def set_scheduled_at
-    self.scheduled_at = created_at + schedule_delay.minutes
+    self.scheduled_at = created_at + schedule_delay.to_i.minutes
   end
 
   def set_notify_at
-    return unless notification_delay.respond_to?(:minutes) && notification_delay >= 0
-    self.notify_at = scheduled_at + notification_delay.minutes
+    return unless notification_delay.present? && notification_delay.to_i >= 0
+    self.notify_at = scheduled_at + notification_delay.to_i.minutes
   end
 end
