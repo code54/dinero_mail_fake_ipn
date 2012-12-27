@@ -44,7 +44,7 @@ class TransitionTest < ActiveSupport::TestCase
 
     transition.notification_delay = -1
     transition.valid?
-    assert transition.errors[:notification_delay].any?
+    assert transition.errors[:notification_delay].empty?
 
     transition.notification_delay = 0
     transition.valid?
@@ -61,9 +61,22 @@ class TransitionTest < ActiveSupport::TestCase
     assert_equal transition.created_at + 1.minute, transition.scheduled_at
   end
 
-  test "sets the notify_at attribute when it is created and notify_delay is present" do
+  test "sets the notify_at attribute equal to scheduled_at when it is created and notify_delay is equal t0 0" do
+    transition = Transition.new(schedule_delay: 1, notification_delay: 0)
+    transition.save!
+    assert_equal transition.scheduled_at, transition.notify_at
+  end
+
+  test "sets the notify_at attribute when it is created and notify_delay is greater than 0" do
     transition = Transition.new(schedule_delay: 1, notification_delay: 2)
     transition.save!
-    assert_equal transition.created_at + 2.minute, transition.notify_at
+    assert_equal transition.scheduled_at + 2.minutes, transition.notify_at
   end
+
+  test "doesn't set the notify_at attribute when it is created and notify_delay is equal to -1" do
+    transition = Transition.new(schedule_delay: 1, notification_delay: -1)
+    transition.save!
+    assert_nil transition.notify_at
+  end
+
 end
