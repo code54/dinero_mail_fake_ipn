@@ -2,7 +2,8 @@ require 'test_helper'
 
 class OperationsControllerTest < ActionController::TestCase
   test "new operation" do
-    integration_request = integration_requests(:jacket)
+    integration_request = integration_requests(:hair_growing_cream)
+
     get :new, integration_request_id: integration_request.id
 
     assert_response :success
@@ -15,7 +16,7 @@ class OperationsControllerTest < ActionController::TestCase
   end
 
   test "successful operation creation" do
-    integration_request = integration_requests(:jacket)
+    integration_request = integration_requests(:hair_growing_cream)
     attributes = { 'buyer_email' => 'buyer@exmaple.com' }
 
     assert_difference ->{ Operation.count } do

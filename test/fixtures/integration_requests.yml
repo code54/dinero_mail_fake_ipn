@@ -9,3 +9,13 @@ jacket:
     buyer_phone: '0303456'
     buyer_email: 'jerry@seinfeld.com'
     ok_url: 'http://seinfeldshop.dev/dinero_mail/ok?token=1234'
+
+hair_growing_cream:
+  raw:
+    transaction_id: '2'
+    item_name_1: 'Hair growing cream'
+    item_quantity_1: '1'
+    item_ammount_1: '133000'
+    buyer_phone: '0303456'
+    buyer_email: 'george@seinfeld.com'
+    ok_url: 'http://seinfeldshop.dev/dinero_mail/ok?token=1234'

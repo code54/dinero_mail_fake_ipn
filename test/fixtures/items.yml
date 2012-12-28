@@ -1,17 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  operation_id: 
-  code: MyString
-  name: MyString
+jacket:
+  operation: jacket
+  code: '1'
+  name: 'Jacket'
   quantity: 1
-  amount: 9.99
-  currency: 1
-
-two:
-  operation_id: 
-  code: MyString
-  name: MyString
-  quantity: 1
-  amount: 9.99
+  amount: 1000.00
   currency: 1

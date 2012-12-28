@@ -1,31 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  integration_request_id:
-  client_id: MyString1
+jacket:
+  integration_request: jacket
+  client_id: '1'
   status: 1
-  buyer_full_name: MyString
-  buyer_document_type: MyString
-  buyer_document_number: MyString
-  buyer_email: MyString
-  buyer_address: MyString
-  buyer_comment: MyText
-  buyer_phone: MyString
-  payment_method_type: 1
-  payment_method: MyString
-  number_of_payments: 1
-
-two:
-  integration_request_id:
-  client_id: MyString2
-  status: 1
-  buyer_full_name: MyString
-  buyer_document_type: MyString
-  buyer_document_number: MyString
-  buyer_email: MyString
-  buyer_address: MyString
-  buyer_comment: MyText
-  buyer_phone: MyString
-  payment_method_type: 1
-  payment_method: MyString
-  number_of_payments: 1
+  buyer_full_name: 'Jerry Seinfeld'
+  buyer_document_type: 'dni'
+  buyer_document_number: '20000000'
+  buyer_email: 'jerry@Seinfeld.com'
+  buyer_address: '129 West 81st Street, apartment 5A'
+  buyer_comment: 'This is a very expensive jacket.'
+  buyer_phone: '0303456'
+  payment_method_type: 3
+  payment_method: VISA
+  number_of_payments: 0
