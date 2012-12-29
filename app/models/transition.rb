@@ -8,7 +8,7 @@ class Transition < ActiveRecord::Base
 
   attr_accessor :notification_delay, :schedule_delay
 
-  def ready?(comparison_time = current_time_from_proper_timezone)
+  def on_schedule?(comparison_time = current_time_from_proper_timezone)
     scheduled_at <= comparison_time
   end
 
@@ -17,7 +17,7 @@ class Transition < ActiveRecord::Base
   end
 
   def perform
-    raise TransitionError if performed? or !ready?
+    raise TransitionError if performed? or !on_schedule?
 
     transaction do
       operation.update_attributes!(status: status)

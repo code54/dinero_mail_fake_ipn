@@ -79,12 +79,12 @@ class TransitionTest < ActiveSupport::TestCase
     assert_nil transition.notify_at
   end
 
-  test "is ready when is on schedule" do
+  test "on or out of schedule" do
     transition = Transition.new(scheduled_at: Time.now)
 
-    assert transition.ready?(transition.scheduled_at)
-    assert transition.ready?(transition.scheduled_at + 1.second)
-    refute transition.ready?(transition.scheduled_at - 1.second)
+    assert transition.on_schedule?(transition.scheduled_at)
+    assert transition.on_schedule?(transition.scheduled_at + 1.second)
+    refute transition.on_schedule?(transition.scheduled_at - 1.second)
   end
 
   test "was peformed when there's a perfomed_at datetime" do
