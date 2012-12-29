@@ -79,4 +79,63 @@ class TransitionTest < ActiveSupport::TestCase
     assert_nil transition.notify_at
   end
 
+  test "is ready when is on schedule" do
+    transition = Transition.new(scheduled_at: Time.now)
+
+    assert transition.ready?(transition.scheduled_at)
+    assert transition.ready?(transition.scheduled_at + 1.second)
+    refute transition.ready?(transition.scheduled_at - 1.second)
+  end
+
+  test "was peformed when there's a perfomed_at datetime" do
+    transition = Transition.new(scheduled_at: Time.now)
+
+    assert_nil transition.performed_at
+    refute transition.performed?
+
+    transition.performed_at = transition.scheduled_at + 1.second
+    assert transition.performed?
+  end
+
+  test "performing a transition which is ready to be made" do
+    transition = transitions(:jacket_ready_to_completed)
+    operation = transition.operation
+
+    refute transition.performed?
+    assert_not_equal operation.status, transition.status
+
+    transition.perform
+
+    assert transition.performed?
+    assert_equal transition.status, operation.status
+    refute transition.changed?
+    refute operation.changed?
+  end
+
+  test "performing a transaction which isn't ready to be made" do
+    transition = transitions(:jacket_not_ready)
+    operation = transition.operation
+
+    assert_no_difference ->{ operation.updated_at } do
+      assert_no_difference ->{ transition.updated_at } do
+        assert_raise TransitionError do
+          transition.perform
+        end
+      end
+    end
+  end
+
+  test "performing a transaction which has already be performed" do
+    transition = transitions(:jacket_already_performed)
+    operation = transition.operation
+
+    assert_no_difference ->{ operation.updated_at } do
+      assert_no_difference ->{ transition.updated_at } do
+        assert_raise TransitionError do
+          transition.perform
+        end
+      end
+    end
+  end
+
 end
