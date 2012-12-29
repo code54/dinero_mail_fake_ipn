@@ -97,6 +97,16 @@ class TransitionTest < ActiveSupport::TestCase
     assert transition.performed?
   end
 
+  test "ready or not" do
+    transition = Transition.new(scheduled_at: Time.now)
+
+    assert transition.ready?(transition.scheduled_at)
+    refute transition.ready?(transition.scheduled_at - 1.second)
+
+    transition.performed_at = transition.scheduled_at
+    refute transition.ready?(transition.scheduled_at)
+  end
+
   test "performing a transition which is ready to be made" do
     transition = transitions(:jacket_ready_to_completed)
     operation = transition.operation

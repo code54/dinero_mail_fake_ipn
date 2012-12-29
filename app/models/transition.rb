@@ -8,6 +8,14 @@ class Transition < ActiveRecord::Base
 
   attr_accessor :notification_delay, :schedule_delay
 
+  def self.ready(comparison_time = Time.now)
+    where(performed_at: nil).where(arel_table[:scheduled_at].lteq(comparison_time))
+  end
+
+  def ready?(comparison_time = current_time_from_proper_timezone)
+    !performed? and on_schedule?(comparison_time)
+  end
+
   def on_schedule?(comparison_time = current_time_from_proper_timezone)
     scheduled_at <= comparison_time
   end
