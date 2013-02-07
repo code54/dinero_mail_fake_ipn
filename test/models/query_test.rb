@@ -56,3 +56,24 @@ class QueryTransactionIdentificationTest < ActiveSupport::TestCase
     assert_equal [], query.transaction_ids
   end
 end
+
+class QueryAnsweringTest < ActiveSupport::TestCase
+  def setup
+    @query = Query.new
+    @answerer = MiniTest::Mock.new
+  end
+
+  test "without a question document" do
+    assert_raise Query::CantBeAnsweredError do
+      @query.answer(@answerer)
+    end
+  end
+
+  test "with a question document" do
+    @query.question_document = 'question document'
+    @answerer.expect :answer_document, 'answer document', [@query]
+    @query.answer(@answerer)
+    @answerer.verify
+    assert_equal 'answer document', @query.answer_document
+  end
+end

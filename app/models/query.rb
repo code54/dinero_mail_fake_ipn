@@ -1,7 +1,13 @@
 class Query < ActiveRecord::Base
+  class CantBeAnsweredError < StandardError; end
 
   def transaction_ids
     find_transaction_ids_in_question_hash
+  end
+
+  def answer(answerer)
+    raise CantBeAnsweredError if question_document.blank?
+    self.answer_document = answerer.answer_document(self)
   end
 
 private
