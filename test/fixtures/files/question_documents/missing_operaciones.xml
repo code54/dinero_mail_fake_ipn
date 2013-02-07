@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<REPORTE>
+  <NROCTA>0303456</NROCTA>
+  <DETALLE>
+    <CONSULTA>
+      <CLAVE>secreto</CLAVE>
+      <TIPO>1</TIPO>
+    </CONSULTA>
+  </DETALLE>
+</REPORTE>

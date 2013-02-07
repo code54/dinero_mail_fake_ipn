@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reporte>
+  <nrocta>0303456</nrocta>
+  <detalle>
+    <consulta>
+      <clave>secreto</clave>
+      <tipo>1</tipo>
+      <operaciones>
+        <id>1</id>
+        <id>2</id>
+      </operaciones>
+    </consulta>
+  </detalle>
+</reporte>
