@@ -6,6 +6,8 @@ gem 'rails', github: 'rails/rails'
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 gem 'rails-i18n', '~> 0.7.1'
 gem 'rufus-scheduler', '~> 2.0.17'
+gem 'nori', '~> 2.0.3'
+gem 'nokogiri', '~> 1.5.6'
 
 gem 'pg'
 
