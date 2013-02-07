@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20121224153548) do
+ActiveRecord::Schema.define(version: 20130207145159) do
 
   create_table "integration_requests", force: true do |t|
     t.text     "raw"
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(version: 20121224153548) do
 
   add_index "operations", ["client_id"], name: "index_operations_on_client_id", unique: true
   add_index "operations", ["integration_request_id"], name: "index_operations_on_integration_request_id"
+
+  create_table "queries", force: true do |t|
+    t.text     "question_document"
+    t.text     "answer_document"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "transitions", force: true do |t|
     t.integer  "operation_id"
