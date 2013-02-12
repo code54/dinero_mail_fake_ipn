@@ -7,3 +7,35 @@ jacket:
   quantity: 1
   amount: 1000.00
   currency: 1
+
+hair_growing_cream:
+  operation: hair_growing_cream
+  code: '1'
+  name: 'Hair growing cream'
+  quantity: 1
+  amount: 1330.00
+  currency: 1
+
+decent_socks:
+  operation: socks
+  code: '1'
+  name: 'Decent socks'
+  quantity: 1
+  amount: 15.00
+  currency: 1
+
+tight_socks:
+  operation: socks
+  code: '1'
+  name: 'Tight socks'
+  quantity: 3
+  amount: 7.00
+  currency: 1
+
+loose_socks:
+  operation: socks
+  code: '1'
+  name: 'Loose socks'
+  quantity: 2
+  amount: 5.00
+  currency: 1

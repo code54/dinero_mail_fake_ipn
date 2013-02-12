@@ -1,9 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  question_document: MyText
-  answer_document: MyText
-
-two:
-  question_document: MyText
-  answer_document: MyText
+unanswered_hair_growing_cream_and_socks:
+  question_document: !xml |
+                     <?xml version="1.0" encoding="ISO-8859-1"?>
+                     <REPORTE>
+                       <NROCTA>0303456</NROCTA>
+                       <DETALLE>
+                         <CONSULTA>
+                           <CLAVE>secreto</CLAVE>
+                           <TIPO>1</TIPO>
+                           <OPERACIONES>
+                             <ID>2</ID>
+                             <ID>3</ID>
+                           </OPERACIONES>
+                         </CONSULTA>
+                       </DETALLE>
+                     </REPORTE>
+  answer_document: ''

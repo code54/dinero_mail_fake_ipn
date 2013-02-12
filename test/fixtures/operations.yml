@@ -14,3 +14,37 @@ jacket:
   payment_method_type: 3
   payment_method: VISA
   number_of_payments: 0
+
+hair_growing_cream:
+  integration_request: hair_growing_cream
+  client_id: '2'
+  status: 2
+  buyer_full_name: 'George Costanza'
+  buyer_document_type: 'dni'
+  buyer_document_number: '30000000'
+  buyer_email: 'george@seinfeld.com'
+  buyer_address: '1344 Queens Boulevard'
+  buyer_comment: ''
+  buyer_phone: '0303456'
+  payment_method_type: 3
+  payment_method: VISA
+  number_of_payments: 0
+  created_at: 2012-11-26 16:27:51.959409000
+  updated_at: 2012-11-26 16:27:51.959409000
+
+socks:
+  integration_request: socks
+  client_id: '3'
+  status: 2
+  buyer_full_name: 'Elaine Benes'
+  buyer_document_type: 'dni'
+  buyer_document_number: '40000000'
+  buyer_email: 'elaine@seinfeld.com'
+  buyer_address: '78, West 86th Street. Apartment 3-E'
+  buyer_comment: ''
+  buyer_phone: '0303456'
+  payment_method_type: 3
+  payment_method: VISA
+  number_of_payments: 0
+  created_at: 2012-11-26 18:25:02.964790000
+  updated_at: 2012-11-26 18:25:02.964790000

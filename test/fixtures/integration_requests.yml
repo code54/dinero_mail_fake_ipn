@@ -19,3 +19,29 @@ hair_growing_cream:
     buyer_phone: '0303456'
     buyer_email: 'george@seinfeld.com'
     ok_url: 'http://seinfeldshop.dev/dinero_mail/ok?token=1234'
+
+socks:
+  raw:
+    transaction_id: '3'
+    item_name_1: 'Loose socks'
+    item_quantity_1: '2'
+    item_ammount_1: '500'
+    item_name_2: 'Tight socks'
+    item_quantity_2: '3'
+    item_ammount_2: '700'
+    item_name_3: 'Decent socks'
+    item_quantity_3: '1'
+    item_ammount_3: '1500'
+    buyer_phone: '0303456'
+    buyer_email: 'elaine@seinfeld.com'
+    ok_url: 'http://seinfeldshop.dev/dinero_mail/ok?token=1234567'
+
+cuban_cigars:
+  raw:
+    transaction_id: '4'
+    item_name_1: 'Cuban cigars'
+    item_quantity_1: '1'
+    item_ammount_1: '300000'
+    buyer_phone: '0303456'
+    buyer_email: 'kramer@seinfeld.com'
+    ok_url: 'http://seinfeldshop.dev/dinero_mail/ok?token=1234'
