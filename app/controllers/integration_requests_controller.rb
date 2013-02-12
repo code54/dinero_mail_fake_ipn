@@ -3,8 +3,7 @@ class IntegrationRequestsController < ApplicationController
 
   def create
     @integration_request = IntegrationRequest.create!(integration_request_attributes)
-    # TODO: redirect to the checkout form.
-    render text: 'success'
+    redirect_to new_integration_request_operation_url(@integration_request)
   end
 
 private

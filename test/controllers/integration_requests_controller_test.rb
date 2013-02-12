@@ -8,11 +8,11 @@ class IntegrationRequestsControllerTest < ActionController::TestCase
       post :create, params
     end
 
-    assert_response :success
-    assert_equal 'success', response.body
-
     integration_request = assigns(:integration_request)
     assert integration_request
     assert_equal params, integration_request.raw
+
+    assert_response :redirect
+    assert_redirected_to new_integration_request_operation_url(integration_request)
   end
 end
