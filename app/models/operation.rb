@@ -5,6 +5,10 @@ class Operation < ActiveRecord::Base
 
   accepts_nested_attributes_for :transitions
 
+  def self.query(ids)
+    where(client_id: ids)
+  end
+
   def net_amount
     items.map(&:subtotal).sum
   end
