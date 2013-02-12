@@ -5,9 +5,10 @@ class Query < ActiveRecord::Base
     find_transaction_ids_in_question_hash
   end
 
-  def answer(answerer)
+  def answer
     raise CantBeAnsweredError if question_document.blank?
-    self.answer_document = answerer.answer_document(self)
+    answerer = Answerer.new(self)
+    self.answer_document = answerer.answer_document
   end
 
 private

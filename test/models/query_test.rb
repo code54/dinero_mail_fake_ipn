@@ -65,15 +65,18 @@ class QueryAnsweringTest < ActiveSupport::TestCase
 
   test "without a question document" do
     assert_raise Query::CantBeAnsweredError do
-      @query.answer(@answerer)
+      @query.answer
     end
   end
 
   test "with a question document" do
     @query.question_document = 'question document'
-    @answerer.expect :answer_document, 'answer document', [@query]
-    @query.answer(@answerer)
-    @answerer.verify
-    assert_equal 'answer document', @query.answer_document
+    @answerer.expect :answer_document, 'answer document', []
+
+    Answerer.stub :new, @answerer do
+      @query.answer
+      assert_equal 'answer document', @query.answer_document
+      @answerer.verify
+    end
   end
 end
