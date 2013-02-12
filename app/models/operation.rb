@@ -4,4 +4,12 @@ class Operation < ActiveRecord::Base
   has_many :transitions
 
   accepts_nested_attributes_for :transitions
+
+  def net_amount
+    items.map(&:subtotal).sum
+  end
+
+  def amount
+    net_amount * BigDecimal('1.06')
+  end
 end
