@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<REPORTE>
+  <ESTADOREPORTE>1</ESTADOREPORTE>
+  <DETALLE>
+    <OPERACIONES>
+      <OPERACION>
+        <ID>2</ID>
+        <FECHA>26/11/2012 04:27:51 PM</FECHA>
+        <ESTADO>2</ESTADO>
+        <NUMTRANSACCION>750844766</NUMTRANSACCION>
+        <COMPRADOR>
+          <EMAIL>george@seinfeld.com</EMAIL>
+          <DIRECCION>1344 Queens Boulevard</DIRECCION>
+          <COMENTARIO></COMENTARIO>
+          <NOMBRE>George Costanza</NOMBRE>
+          <TELEFONO>0303456</TELEFONO>
+          <TIPODOC>DNI</TIPODOC>
+          <NUMERODOC>30000000</NUMERODOC>
+        </COMPRADOR>
+        <MONTO>1409.80</MONTO>
+        <MONTONETO>1330.00</MONTONETO>
+        <METODOPAGO>3</METODOPAGO>
+        <MEDIOPAGO>VISA</MEDIOPAGO>
+        <CUOTAS>0</CUOTAS>
+        <ITEMS>
+          <ITEM>
+            <DESCRIPCION>Hair growing cream</DESCRIPCION>
+            <MONEDA>1</MONEDA>
+            <PRECIOUNITARIO>1330.00</PRECIOUNITARIO>
+            <CANTIDAD>1</CANTIDAD>
+          </ITEM>
+        </ITEMS>
+        <VENDEDOR/>
+        <TIPODOC>DNI</TIPODOC>
+        <NUMERODOC>12345678</NUMERODOC>
+      </OPERACION>
+      <OPERACION>
+        <ID>3</ID>
+        <FECHA>26/11/2012 06:25:02 PM</FECHA>
+        <ESTADO>2</ESTADO>
+        <NUMTRANSACCION>511798724</NUMTRANSACCION>
+        <COMPRADOR>
+          <EMAIL>elaine@seinfeld.com</EMAIL>
+          <DIRECCION>78, West 86th Street. Apartment 3-E</DIRECCION>
+          <COMENTARIO></COMENTARIO>
+          <NOMBRE>Elaine Benes</NOMBRE>
+          <TELEFONO>0303456</TELEFONO>
+          <TIPODOC>DNI</TIPODOC>
+          <NUMERODOC>40000000</NUMERODOC>
+        </COMPRADOR>
+        <MONTO>48.76</MONTO>
+        <MONTONETO>46.00</MONTONETO>
+        <METODOPAGO>3</METODOPAGO>
+        <MEDIOPAGO>VISA</MEDIOPAGO>
+        <CUOTAS>0</CUOTAS>
+        <ITEMS>
+          <ITEM>
+            <DESCRIPCION>Loose socks</DESCRIPCION>
+            <MONEDA>1</MONEDA>
+            <PRECIOUNITARIO>5.00</PRECIOUNITARIO>
+            <CANTIDAD>2</CANTIDAD>
+          </ITEM>
+          <ITEM>
+            <DESCRIPCION>Tight socks</DESCRIPCION>
+            <MONEDA>1</MONEDA>
+            <PRECIOUNITARIO>7.00</PRECIOUNITARIO>
+            <CANTIDAD>3</CANTIDAD>
+          </ITEM>
+          <ITEM>
+            <DESCRIPCION>Decent socks</DESCRIPCION>
+            <MONEDA>1</MONEDA>
+            <PRECIOUNITARIO>15.00</PRECIOUNITARIO>
+            <CANTIDAD>1</CANTIDAD>
+          </ITEM>
+        </ITEMS>
+        <VENDEDOR/>
+        <TIPODOC>DNI</TIPODOC>
+        <NUMERODOC>12345678</NUMERODOC>
+      </OPERACION>
+    </OPERACIONES>
+  </DETALLE>
+</REPORTE>
