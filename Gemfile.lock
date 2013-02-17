@@ -80,6 +80,9 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.1)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
@@ -92,6 +95,7 @@ GEM
     mime-types (1.19)
     minitest (4.3.3)
     multi_json (1.5.0)
+    multi_xml (0.5.3)
     nokogiri (1.5.6)
     nori (2.0.3)
     pg (0.14.1)
@@ -137,6 +141,7 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   bootstrap-sass (~> 2.2.2.0)
   coffee-rails!
+  httparty (~> 0.10.2)
   jquery-rails
   nokogiri (~> 1.5.6)
   nori (~> 2.0.3)

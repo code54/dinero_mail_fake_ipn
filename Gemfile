@@ -8,6 +8,7 @@ gem 'rails-i18n', '~> 0.7.1'
 gem 'rufus-scheduler', '~> 2.0.17'
 gem 'nori', '~> 2.0.3'
 gem 'nokogiri', '~> 1.5.6'
+gem 'httparty', '~> 0.10.2'
 
 gem 'pg'
 
