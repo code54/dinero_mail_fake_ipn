@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<notificacion>
+  <tiponotificacion>1</tiponotificacion>
+  <operaciones>
+    <operacion>
+      <tipo>1</tipo>
+      <id>1000</id>
+    </operacion>
+    <operacion>
+      <tipo>1</tipo>
+      <id>1001</id>
+    </operacion>
+    <operacion>
+      <tipo>1</tipo>
+      <id>1002</id>
+    </operacion>
+  </operaciones>
+</notificacion>
