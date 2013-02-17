@@ -33,6 +33,10 @@ class Transition < ActiveRecord::Base
     end
   end
 
+  def need_notification?
+    true
+  end
+
 private
 
   def set_delays
