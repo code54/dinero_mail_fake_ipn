@@ -23,6 +23,6 @@ private
   end
 
   def operation_params
-    params.require(:operation).permit(:buyer_full_name, :buyer_document_type, :buyer_document_number, :buyer_email, :buyer_address, :buyer_comment, :buyer_phone, :payment_method_type, :payment_method, :number_of_payments, transitions_attributes: [:status, :schedule_delay, :notification_delay])
+    params.require(:operation).permit(:buyer_full_name, :buyer_document_type, :buyer_document_number, :buyer_email, :buyer_address, :buyer_comment, :buyer_phone, :payment_method_type, :payment_method, :number_of_payments, transitions_attributes: [:status, :schedule_delay, :needs_notification])
   end
 end

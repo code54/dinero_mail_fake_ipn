@@ -92,7 +92,7 @@
             <td><span class="badge"><%= transition_fields.index + 1 %></span></td>
             <td><%= transition_fields.select :status, statuses_collection %></td>
             <td><%= transition_fields.select :schedule_delay, schedule_delays_collection %></td>
-            <td><%= transition_fields.select :notification_delay, notification_delays_collection %></td>
+            <td><%= transition_fields.check_box :needs_notification %></td>
           </tr>
         <% end %>
       </tbody>

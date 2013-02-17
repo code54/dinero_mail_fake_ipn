@@ -1,12 +1,11 @@
 class Transition < ActiveRecord::Base
   belongs_to :operation
 
-  validates :notification_delay, numericality: { allow_nil: true, only_integer: true, greater_than_or_equal_to: -1 }, if: :new_record?
   validates :schedule_delay, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, if: :new_record?
 
-  before_create :set_delays
+  before_create :set_scheduled_at
 
-  attr_accessor :notification_delay, :schedule_delay
+  attr_accessor :schedule_delay
 
   def self.ready(comparison_time = Time.now)
     where(performed_at: nil).where(arel_table[:scheduled_at].lteq(comparison_time))
@@ -33,24 +32,10 @@ class Transition < ActiveRecord::Base
     end
   end
 
-  def need_notification?
-    true
-  end
-
 private
-
-  def set_delays
-    set_scheduled_at
-    set_notify_at
-  end
 
   def set_scheduled_at
     self.scheduled_at = created_at + schedule_delay.to_i.minutes
-  end
-
-  def set_notify_at
-    return unless notification_delay.present? && notification_delay.to_i >= 0
-    self.notify_at = scheduled_at + notification_delay.to_i.minutes
   end
 end
 

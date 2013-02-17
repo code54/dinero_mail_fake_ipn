@@ -23,8 +23,4 @@ module OperationsHelper
   def schedule_delays_collection
     [['No Esperar', 0], ['1 Minuto', 1], ['5 Minutos', 5], ['15 Minutos', 15]]
   end
-
-  def notification_delays_collection
-    [['No Notificar', -1], ['No Esperar', 0], ['1 Minuto', 1], ['5 Minutos', 5], ['15 Minutos', 15]]
-  end
 end
