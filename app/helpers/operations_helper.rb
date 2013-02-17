@@ -1,3 +1,4 @@
+# encoding: utf-8
 module OperationsHelper
   def buyer_document_types_collection
     [['D.N.I.', 'dni']]
