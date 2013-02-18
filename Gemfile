@@ -11,6 +11,7 @@ gem 'nokogiri', '~> 1.5.6'
 gem 'httparty', '~> 0.10.2'
 
 gem 'pg'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
