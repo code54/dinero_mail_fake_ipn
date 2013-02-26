@@ -5,7 +5,7 @@ if ENV['DINERO_MAIL_FAKE_IPN_SCHEDULER'] == 'true'
     ActiveRecord::Base.connection_pool.with_connection do
       # TODO: Move this to a place where I can test it.
       performed_transitions = Transition.ready.each(&:perform)
-      transitions_that_need_notification = performed_transitions.find_all(&:need_notification?)
+      transitions_that_need_notification = performed_transitions.find_all(&:needs_notification?)
       ids = transitions_that_need_notification.map { |transition| transition.operation.client_id }.uniq
 
       unless ids.empty?
